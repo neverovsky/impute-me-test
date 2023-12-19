@@ -1,0 +1,14 @@
+version: "3.2"
+
+services:
+  rrr:
+    image: 'rrr'
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    volumes:
+      - .:/imputeme/code/impute-me/
+    ports:
+      - '3838:3838'
+    environment:
+      SHINY_LOG_STDERR: 1

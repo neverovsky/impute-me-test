@@ -151,9 +151,6 @@ RUN echo "*/5 * * * * Rscript /imputeme/code/impute-me/imputeme/imputation_cron_
 echo "*/7 * * * * Rscript /imputeme/code/impute-me/imputeme/vcf_handling_cron_job.R > /home/ubuntu/\`date +\%Y\%m\%d\%H\%M\%S\`-vcf-cron.log 2>&1" >> /imputeme/programs/supercronic.txt && \
 echo "00 20 * * * Rscript /imputeme/code/impute-me/imputeme/deletion_cron_job.R > /home/ubuntu/\`date +\%Y\%m\%d\%H\%M\%S\`-delete-cron.log 2>&1" >> /imputeme/programs/supercronic.txt
 
-
-#clone the main github repo
-RUN git clone https://github.com/lassefolkersen/impute-me.git /imputeme/code/impute-me/
   
 #Expose the 3838 port
 EXPOSE 3838
